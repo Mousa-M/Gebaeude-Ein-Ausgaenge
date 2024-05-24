@@ -147,7 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
         totalPeople.count = 0; 
         totalPeopleElement.textContent = 0; 
         entrancesExits.forEach((entranceExit, index) => {
-            tableRows[index].entriesCell.textContent = 0
+            entrancesExits[index].entries = 0;
+            entrancesExits[index].exits = 0;
+            tableRows[index].entriesCell.textContent = 0;
             tableRows[index].exitsCell.textContent = 0;
         });
 

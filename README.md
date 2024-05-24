@@ -14,5 +14,5 @@ Zeit: ca 1h 45min
 Hilfsmittel: ChatGPT 3.5
 
 # Zum Starten
--Main Ordner runterladen  
+-Zip runterladen  
 -index.html starten
