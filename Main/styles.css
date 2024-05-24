@@ -1,0 +1,36 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+p {
+	margin-top: 20px;
+	font-size: 18px;
+	margin-right: 5px;
+}
+
+button {
+	margin-top: 10px;
+	font-size: 18px;
+	margin-right: 15px;
+}
+
+div {
+	display: flex;
+	align-items: center;
+	margin-left: 20px;
+}

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulationsprogramm: Gebäude-Ein-/Ausgänge</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Simulationsprogramm: Gebäude-Ein-/Ausgänge</h1>
+
+    <!-- Knöpfe zum Bedienen der Simulation -->
+    <div>
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="continueBtn">Continue</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <!-- Status der Simulation -->
+    <div>
+        <p>Status der Simulation:</p>
+        <p id="status">Default</p>
+    </div>
+
+    <!-- Tabelle für Ein-/Ausgänge -->
+    <table id="logTable" border="1">
+        <thead>
+            <tr>
+                <th>Ein-/Ausgang</th>
+                <th>Anzahl eingetretener Personen</th>
+                <th>Anzahl ausgetreten Personen</th>
+            </tr>
+        </thead>
+
+        <!-- Einträge werden dynamisch eingefügt -->
+        <tbody></tbody>
+
+    </table>
+
+    <!-- Anzahl Personen derzeitig im Gebäude -->
+    <div>
+        <p>Anzahl Personen im Gebäude:</p>
+        <p id="totalPeople">0</p>
+    </div>
+
+    <!-- Update alle 5 Sekunden, wieviele ein-/ausgegangen sind -->
+    <div>
+        <p>Letztes Update:</p>
+        <p id="update">0 eingetreten. 0 ausgetreten.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
