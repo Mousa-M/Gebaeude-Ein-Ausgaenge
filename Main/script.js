@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let simulationInterval;
 
-    startBtn.addEventListener('click', startSimulation);
+    startBtn.addEventListener('click', runSimulation);
     pauseBtn.addEventListener('click', pauseSimulation);
-    continueBtn.addEventListener('click', continueSimulation);
+    continueBtn.addEventListener('click', runSimulation);
     resetBtn.addEventListener('click', resetSimulation);
 
     startBtn.disabled = false;
@@ -102,14 +102,17 @@ document.addEventListener('DOMContentLoaded', () => {
         peopleExited.count = 0;
     }
 
-    // Simulation starten
-    function startSimulation() {
+    // Simulation starten/weiterführen
+    function runSimulation() {
+        // Intervall setzen (5 Sekunden)
         clearInterval(simulationInterval);
         simulationInterval = setInterval(simulateRandomEntriesExits, 5000);
 
+        // Simulation aufrufen
         simulateRandomEntriesExits();
         status.textContent = 'Am Laufen'
 
+        // Knöpfe ein-/ausschalten
         startBtn.disabled = true;
         pauseBtn.disabled = false;
         continueBtn.disabled = true;
@@ -124,17 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
         startBtn.disabled = true;
         pauseBtn.disabled = true;
         continueBtn.disabled = false;
-        resetBtn.disabled = false;
-    }
-
-    // Simulation weiterführen
-    function continueSimulation() {
-        startSimulation(); 
-        status.textContent = 'Am Laufen'
-
-        startBtn.disabled = true;
-        pauseBtn.disabled = false;
-        continueBtn.disabled = true;
         resetBtn.disabled = false;
     }
 
